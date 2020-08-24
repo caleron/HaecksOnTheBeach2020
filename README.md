@@ -1,5 +1,15 @@
 # HaecksOnTheBeach2020
 
+## Setup
+1. Clone this repository
+2. Obtain a mapbox API token (https://account.mapbox.com/access-tokens/)
+3. Put the mapbox API token into src/App.tsx
+4. Run `yarn install` from a terminal in the root directory.
+5. Run `yarn start` from a terminal in the root directory. This will start a server and automatically open the mood map in the default browser (may take a minute for the first render)
+
+
+Now the standard Readme from Create React App follows.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
