@@ -1,0 +1,127 @@
+export const baseLayer = {
+  id: "ufxdb4a",
+  type: "geojson",
+  config: {
+    dataId: "base",
+    label: "basedata",
+    color: [18, 147, 154],
+    columns: {
+      geojson: "_geojson",
+    },
+    isVisible: true,
+    visConfig: {
+      opacity: 0.8,
+      strokeOpacity: 0.8,
+      thickness: 0.5,
+      strokeColor: [221, 178, 124],
+      colorRange: {
+        name: "Global Warming",
+        type: "sequential",
+        category: "Uber",
+        colors: [
+          "#00ff00",
+          "#1aff00",
+          "#33ff00",
+          "#4dff00",
+          "#66ff00",
+          "#80ff00",
+          "#99ff00",
+          "#b3ff00",
+          "#ccff00",
+          "#e6ff00",
+          "#ffff00",
+          "#ffe600",
+          "#ffcc00",
+          "#ffb300",
+          "#ff9900",
+          "#ff8000",
+          "#ff6600",
+          "#ff4d00",
+          "#ff3300",
+          "#ff1a00",
+        ],
+      },
+      strokeColorRange: {
+        name: "Global Warming",
+        type: "sequential",
+        category: "Uber",
+        colors: [
+          "#5A1846",
+          "#900C3F",
+          "#C70039",
+          "#E3611C",
+          "#F1920E",
+          "#FFC300",
+        ],
+      },
+      radius: 10,
+      sizeRange: [0, 10],
+      radiusRange: [0, 50],
+      heightRange: [0, 500],
+      elevationScale: 5,
+      stroked: false,
+      filled: true,
+      enable3d: false,
+      wireframe: false,
+    },
+    hidden: false,
+    textLabel: [
+      {
+        field: null,
+        color: [255, 255, 255],
+        size: 18,
+        offset: [0, 0],
+        anchor: "start",
+        alignment: "center",
+      },
+    ],
+  },
+  visualChannels: {
+    colorField: {
+      name: "mood",
+      type: "real",
+    },
+    colorScale: "quantile",
+    sizeField: null,
+    sizeScale: "linear",
+    strokeColorField: null,
+    strokeColorScale: "quantile",
+    heightField: null,
+    heightScale: "linear",
+    radiusField: null,
+    radiusScale: "linear",
+  },
+};
+export const keplerConfig = {
+  version: "v1",
+  config: {
+    visState: {
+      filters: [],
+      layers: [baseLayer],
+      interactionConfig: {
+        tooltip: {
+          fieldsToShow: {
+            base: ["name", "mood"],
+          },
+          enabled: true,
+        },
+        brush: {
+          size: 0.5,
+          enabled: false,
+        },
+        geocoder: {
+          enabled: false,
+        },
+        coordinate: {
+          enabled: false,
+        },
+      },
+      layerBlending: "normal",
+      splitMaps: [],
+      animationConfig: {
+        currentTime: null,
+        speed: 1,
+      },
+    },
+  },
+};
